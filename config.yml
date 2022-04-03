@@ -1,0 +1,95 @@
+baseURL: "https://blog.tinqin881.top/"
+languageCode: "en"
+DefaultContentLanguage: "en"
+title: "😃 坐和放宽"
+languageAltTitle: "Game"
+theme: "PaperMod"
+defaultTheme: "auto"
+paginate: 8
+
+assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon_16_16.ico"
+    favicon32x32: "/favicon.ico"
+    apple_touch_icon: "/favicon.ico>"
+    safari_pinned_tab: "/favicon.ico"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        menu:
+            main:
+                - name: Archive
+                  url: archives
+                  weight: 5
+                - name: Tags
+                  url: tags/
+                  weight: 4
+                - name: Search
+                  url: search/
+                  weight: 10
+                - name: Categories
+                  url: categories/
+                  weight: 4
+    fr:
+        languageName: ":fr:"
+        languageAltTitle: French
+        weight: 2
+        title: PaperModL2
+        profileMode:
+            enabled: true
+            title: PaperMod
+            # imageUrl: "#"
+            # imageTitle: my image
+            # imageWidth: 120
+            # imageHeight: 120
+            subtitle: "☄️ 快速 | ☁️ 流畅 | 🌙 平稳 | 📱 迅速"
+            buttons:
+                - name: Blog
+                  url: posts
+                - name: Tags
+                  url: tags
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
+
+params:
+    homeInfoParams:
+        Title: "XiangHao的书签站"
+        Content: >
+            👋 嗨， 欢迎来到 XiangHao的书签站 ！
+    env: production
+    socialIcons:
+        - name: github
+          url: "https://github.com/LaiZho/"
+        - name: qq
+          url: "https://ko-fi.com/adityatelange"
+          name: Email
+          url: "mailto:1113160321@qq.com"
+        - name: RsS
+          url: "index.xml"
+    comments: true
+    ShowPostNavLinks: true
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        # anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        lineNos: true
+        # noClasses: false
+        style: monokai
+
